@@ -70,7 +70,7 @@ $o = new MyHelloWorld();
 $o->sayHello();
 ?>
 ```
-PHP CHAINING
+#### PHP CHAINING
 ```
 class Demo {
   public function hello(){
@@ -84,4 +84,18 @@ class Demo {
 }
 $demo = new Demo();
 $demo->hello()->world();
+```
+#### STATIC CHAINING
+```
+class test {
+    public static function a(){
+        echo 1;
+        return __CLASS__; //$this will not work in static
+    }
+    public static function b(){
+        echo 2;
+        return __CLASS__;
+    }
+}
+test::a()::b();
 ```
