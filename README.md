@@ -99,9 +99,14 @@ class Demo {
 }
 Demo::hellow()::world();
 ```
-#### SELF, STATIC, REGULAR OBJECT
+#### SELF, PARENT, STATIC, REGULAR OBJECT
 ```
-class Book {
+class Author {
+	public static function person(){
+		return "Rodriguez";
+	}
+}
+class Book extends Author {
     public static $id;
     public static $bookname;
     public static $stock_qty;
@@ -121,8 +126,10 @@ class Book {
     {
         echo "Book id: ".self::$id."<br />";
         echo "Book name: ".self::$bookname."<br />";
+		echo "Author: ".parent::person()."<br />";
         echo "Current stock: ".self::$stock_qty."<br />";
     }
+	
 }
 $bookObject = new Book("123","Learning PHP",120);
 $bookObject->addBook(30);
