@@ -99,3 +99,32 @@ class Demo {
 }
 Demo::hellow()::world();
 ```
+#### SELF, STATIC, REGULAR OBJECT
+```
+class Book {
+    public static $id;
+    public static $bookname;
+    public static $stock_qty;
+
+    public function __construct($id,$bookname,$stock_qty)
+    {
+        self::$id = $id;
+        self::$bookname = $bookname;
+        self::$stock_qty = $stock_qty;
+    }
+    public function addBook($qty)
+    {
+		self::$stock_qty += $qty;
+        self::display();
+    }
+    public static function display()
+    {
+        echo "Book id: ".self::$id."<br />";
+        echo "Book name: ".self::$bookname."<br />";
+        echo "Current stock: ".self::$stock_qty."<br />";
+    }
+}
+$bookObject = new Book("123","Learning PHP",120);
+$bookObject->addBook(30);
+Book::display();
+```
