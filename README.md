@@ -87,15 +87,15 @@ $demo->hello()->world();
 ```
 #### STATIC CHAINING
 ```
-class test {
-    public static function a(){
-        echo 1;
+class Demo {
+    public static function hello(){
+        echo "Hello";
         return __CLASS__; //$this will not work in static
     }
-    public static function b(){
-        echo 2;
+    public static function world(){
+        echo "World!";
         return __CLASS__;
     }
 }
-test::a()::b();
+Demo::hellow()::world();
 ```
