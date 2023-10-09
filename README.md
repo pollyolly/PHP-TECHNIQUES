@@ -1,6 +1,6 @@
 ### PHP-TECHNIQUES
 [NAMESPACES](https://www.php.net/manual/en/language.namespaces.php)
-```
+```php
 file1:
 <?php namespace foo;
   class Cat {
@@ -29,7 +29,7 @@ file4:
   echo \animate\Animal::breathes(), "<br />\n";  ?>
 ```
 [AUTOLOADING](https://www.php.net/manual/en/language.oop5.autoload.php)
-```
+```php
 class Autoloader
 {
     public static function register()
@@ -47,7 +47,7 @@ class Autoloader
 Autoloader::register();
 ```
 [TRAITS](https://www.php.net/manual/en/language.oop5.traits.php)
-```
+```php
 <?php
 class Base {
     public function sayHello() {
@@ -71,7 +71,7 @@ $o->sayHello();
 ?>
 ```
 #### PHP CHAINING
-```
+```php
 class Demo {
   public function hello(){
     echo "Hello";
@@ -86,7 +86,7 @@ $demo = new Demo();
 $demo->hello()->world();
 ```
 #### STATIC CHAINING
-```
+```php
 class Demo {
     public static function hello(){
         echo "Hello";
@@ -100,7 +100,7 @@ class Demo {
 Demo::hellow()::world();
 ```
 #### SELF, PARENT, STATIC, REGULAR OBJECT
-```
+```php
 class Author {
 	public static function person(){
 		return "Rodriguez";
