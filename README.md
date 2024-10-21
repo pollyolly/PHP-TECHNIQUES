@@ -46,6 +46,9 @@ class Autoloader
 }
 Autoloader::register();
 ```
+```php
+require __DIR__ . '/vendor/autoload.php';
+```
 [TRAITS](https://www.php.net/manual/en/language.oop5.traits.php)
 ```php
 <?php
